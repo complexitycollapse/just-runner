@@ -1,0 +1,47 @@
+{
+  "name": "just-runner",
+  "displayName": "Just Runner",
+  "description": "A simple test runner for the Just test framework",
+  "version": "0.0.1",
+  "icon": "flame 128x128.png",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "activationEvents": [
+    "onCommand:extension.runJustTest",
+    "onLanguage:javascript"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.runJustTest",
+        "title": "Run Just Test"
+      },
+      {
+        "command": "extension.debugJustTest",
+        "title": "Debug Just Test"
+      }
+    ],
+    "languages": [
+      {
+        "id": "javascript",
+        "aliases": [
+          "JavaScript",
+          "javascript",
+          "js"
+        ],
+        "extensions": [
+          ".js"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ]
+  },
+  "scripts": {
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.92.0"
+  }
+}
