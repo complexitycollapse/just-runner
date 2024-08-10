@@ -63,7 +63,7 @@ function activate(context) {
         const debugConfig = {
             type: 'node', // This assumes you're using Node.js
             request: 'launch',
-            name: `Debug ${testName}`,
+            name: `Just Debug`,
             program: "C:\\Users\\Main\\repos\\just\\just\\index.js",
             args: ['--file', filePath, '--test', testName],
             cwd: '${workspaceFolder}',
